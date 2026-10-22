@@ -1,0 +1,100 @@
+h1 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333333; 
+      text-transform: uppercase;
+      font-size: 4rem; 
+      line-height: 1;
+      display:flex;
+      justify-content:center;
+      align-items:center;     
+      flex-direction: column;     
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+     }
+
+.primero {
+           text-align: center;
+           font-size: 30px;
+           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+           color: #333333;
+         }
+
+body {background-color: #DCB465;}
+
+
+.subtitulos {
+              padding: 12px 20px;      /* Espacio interno arriba/abajo y a los lados */
+            border-radius: 6px;      /* Esquinas redondeadas */
+            margin-bottom: 15px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 50px;
+}
+
+
+
+h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700; 
+    color: #333333; 
+    text-transform: uppercase;
+    letter-spacing: -0.07em;
+    font-size: 2rem; 
+    line-height: 1;
+    display: inline-block;
+    border-bottom: 4px solid #a77659;
+}
+
+
+.listas {
+    font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 25px;
+        }
+
+
+.imagen {
+    border-radius: 20px;
+    width: 400px;
+    padding: 10px;
+    float: left;
+        }
+
+
+div {
+    display: flow-root;
+    }
+
+.introparrafo {
+                  text-align: justify;
+                  margin-top: 0;
+                  font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive, sans-serif;
+                  font-size: 25px;
+              }
+
+
+
+
+
+.video {
+    display: block;
+    margin: 0 auto;
+   border-radius: 20px;
+    width: 560px;
+    height: 315px;
+}
+
+.imagen2 {
+    border-radius: 20px;
+    width: 600px;
+    margin: 50px;
+    float: right;
+    display: block;
+        }
+
+
+.mapa{
+    display: block;
+    
+    border-radius: 20px;
+    width: 600px;
+    height: 450px;
+}
