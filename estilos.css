@@ -1,0 +1,245 @@
+h1 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333333; 
+      text-transform: uppercase;
+      font-size: 4rem; 
+      line-height: 1;
+      display:flex;
+      justify-content:center;
+      align-items:center;     
+       
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+     }
+
+.primero {
+           text-align: center;
+           font-size: 30px;
+           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+           color: #333333;
+         }
+
+body {background-color: #DCB465;}
+ 
+footer {
+        background-color: #b4592480;   
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+
+}
+
+.subtitulos {
+              padding: 12px 20px;      /* Espacio interno arriba/abajo y a los lados */
+            border-radius: 6px;      /* Esquinas redondeadas */
+            margin-bottom: 15px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 50px;
+}
+
+
+
+h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700; 
+    color: #333333; 
+    text-transform: uppercase;
+    letter-spacing: -0.07em;
+    font-size: 2rem; 
+    line-height: 1;
+    display: inline-block;
+    border-bottom: 4px solid #a77659;
+}
+
+
+.listas {
+    font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 25px;
+        }
+
+
+.imagen {
+    border-radius: 20px;
+    width: 400px;
+    padding: 10px;
+    float: left;
+        }
+
+
+
+
+.introparrafo {
+                  text-align: justify;
+                  margin-top: 0;
+                  font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive, sans-serif;
+                  font-size: 25px;
+              }
+
+
+
+
+
+.video {
+    display: block;
+    margin: 0 auto;
+   border-radius: 20px;
+    width: 560px;
+    height: 315px;
+}
+
+.imagen2 {
+    border-radius: 20px;
+    width: 600px;
+    margin: 50px;
+    float: right;
+    display: block;
+        }
+
+
+.mapa{
+    display: block;
+     
+    border-radius: 20px;
+    width: 600px;
+    height: 450px}
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #b4592480;
+ 
+        
+    
+    }
+
+.logo {
+         border-radius: 50%;
+         
+
+
+
+
+
+}
+                  
+
+
+
+
+
+
+
+  
+.icons {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  z-index: -1;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  flex-direction:row;
+}
+.iconName {
+  position: absolute;
+  top: -40px;
+  font-size: 12px;
+  color: #fff;
+  transform: scale(0);
+  border-radius: 3px;
+  text-align: center;
+  padding: 3px;
+  transition: transform 0.3s ease;
+}
+
+.icons.instaIcon:hover .iconName {
+  transform: scale(1);
+  left: 15px;
+  background: linear-gradient(30deg, #0000ff, #f56040);
+}
+
+.icons.linkedin:hover .iconName {
+  transform: scale(1);
+  left: 106px;
+  background: #0274b3;
+}
+.icons.whatsapp:hover .iconName {
+  transform: scale(1);
+  right: 100px;
+  background: #25d366;
+}
+.icons.youtube:hover .iconName {
+  transform: scale(1);
+  right: 15px;
+  background: #ff0000;
+}
+.icon {
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  transition: color 0.3s ease;
+  color: #0c0c0c;
+}
+.icon:hover {
+  color: #fff;
+}
+.icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  transform: rotateX(360deg);
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.icon:hover::before {
+  height: 100%;
+  z-index: 1;
+}
+.icon:hover {
+  box-shadow: 5px 5px 10px #181717ce;
+}
+
+.icon.tube::before {
+  z-index: -1;
+  background: red;
+}
+
+.icon.insta::before {
+  z-index: -1;
+  background: linear-gradient(40deg, #0000ff, #f56040);
+}
+
+.icon.link::before {
+  z-index: -1;
+  background: #0274b3;
+}
+
+.icon.whats::before {
+  z-index: -1;
+  background: #25d366;
+}
+
+
+
+
+
+
+
