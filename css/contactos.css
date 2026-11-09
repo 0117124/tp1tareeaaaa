@@ -1,0 +1,30 @@
+
+
+.imagendefondo {
+    background-image: url("https://www.elsoldemexico.com.mx/doble-via/estados/2023/06/30/2023-06-30-17-51-50_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 125vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contactanos{
+    justify-content: center; 
+    align-self: flex-start;
+    position: relative; 
+    top: -1000px;  
+    font-size: 200px; 
+    color:black
+
+}
+
+footer {
+         margin-top: -200px;
+ 
+
+
+}

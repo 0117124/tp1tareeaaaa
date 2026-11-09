@@ -26,6 +26,7 @@ footer {
         display: flex;
         justify-content:space-around;
         align-items: center;
+        flex-wrap: wrap;
 
 }
 
@@ -37,7 +38,42 @@ footer {
             font-size: 50px;
 }
 
+nav{
+    background-color: #C86D33;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    
+    
+    
+}
 
+.volveralinicio {
+                  font-size:30px;
+                  color: black;
+                  background-color: rgb(192, 154, 71);
+
+
+
+
+
+
+  
+}
+
+
+
+  nav button {
+  font-size: 30px;
+    background-color: rgb(192, 154, 71);
+    color:black
+  }
+
+  button:hover {
+
+    background-color: #C86D33;
+    
+  }
 
 h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -55,7 +91,11 @@ h2 {
 .listas {
     font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive, sans-serif;
     font-size: 25px;
-        }
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
 
 
 .imagen {
@@ -89,7 +129,7 @@ h2 {
 
 .imagen2 {
     border-radius: 20px;
-    width: 600px;
+    width: 400px;
     margin: 50px;
     float: right;
     display: block;
@@ -107,7 +147,7 @@ h2 {
         display: flex;
         justify-content: space-around;
         align-items: center;
-
+        flex-wrap: wrap;
         background-color: #b4592480;
  
         
