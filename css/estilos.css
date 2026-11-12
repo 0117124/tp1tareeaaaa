@@ -8,18 +8,21 @@ h1 {
       justify-content:center;
       align-items:center;     
        
-      margin: 0;
+     
       animation: fadeIn 2s ease-in-out;
      }
 
-.primero {
-           text-align: center;
-           font-size: 30px;
-           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
-           color: #333333;
-         }
 
-body {background-color: #DCB465;}
+
+body {
+  background-color: #DCB465;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
  
 footer {
         background-color: #b4592480;   
@@ -30,13 +33,7 @@ footer {
 
 }
 
-.subtitulos {
-              padding: 12px 20px;      /* Espacio interno arriba/abajo y a los lados */
-            border-radius: 6px;      /* Esquinas redondeadas */
-            margin-bottom: 15px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-size: 50px;
-}
+
 
 nav{
     background-color: #C86D33;
@@ -53,13 +50,11 @@ nav{
                   color: black;
                   background-color: rgb(192, 154, 71);
 
-
-
-
-
-
-  
 }
+
+
+                      
+
 
 
 
@@ -98,50 +93,17 @@ h2 {
 }
 
 
-.imagen {
-    border-radius: 20px;
-    width: 400px;
-    padding: 10px;
-    float: left;
-        }
 
-
-
-
-.introparrafo {
-                  text-align: justify;
-                  margin-top: 0;
-                  font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive, sans-serif;
-                  font-size: 25px;
-              }
-
-
-
-
-
-.video {
-    display: block;
-    margin: 0 auto;
-   border-radius: 20px;
-    width: 560px;
-    height: 315px;
-}
-
-.imagen2 {
-    border-radius: 20px;
-    width: 400px;
-    margin: 50px;
-    float: right;
-    display: block;
-        }
 
 
 .mapa{
     display: block;
      
     border-radius: 20px;
-    width: 600px;
-    height: 450px}
+  width: min(600px, 100%);
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
 
     header {
         display: flex;
@@ -156,21 +118,8 @@ h2 {
 
 .logo {
          border-radius: 50%;
-         
-
-
-
-
-
+        
 }
-                  
-
-
-
-
-
-
-
   
 .icons {
   width: 50px;
@@ -186,6 +135,7 @@ h2 {
   justify-content:center;
   flex-direction:row;
 }
+
 .iconName {
   position: absolute;
   top: -40px;
@@ -278,8 +228,177 @@ h2 {
 }
 
 
+/* Contenedor principal que envuelve al section y al aside en fila */
+.contenedor-principal {
+    display: flex;
+    gap: 20px; /* Espacio entre el section y el aside */
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+    padding: 20px;
+}
+
+/* --- SECCIÓN PRINCIPAL (IZQUIERDA) --- */
+section {
+    display: flex;
+    flex-direction: column; /* Apila sus elementos hijos en columna */
+    gap: 20px; /* Espacio vertical entre ingredientes, preparación y fotos */
+    flex: 2; /* Ocupa el doble de espacio horizontal que el aside */
+    
+    padding: 20px;
+}
+
+.ingredientes {
+    width: 100%;
+    height: 150px;
+    
+}
+
+.preparacion {
+    width: 100%;
+    height: 150px;
+    
+}
+
+/* Contenedor auxiliar para poner las dos fotos una al lado de la otra */
+.contenedor-fotos {
+    display: flex;
+    gap: 20px; /* Espacio entre las dos fotos */
+}
+
+.foto {
+    flex: 1; /* Ambas fotos ocupan el mismo ancho disponible */
+    height: 80px;
+    
+}
+
+
+/* --- ASIDE (DERECHA) --- */
+aside {
+    display: flex;
+    flex-direction: column; /* Apila los videos en columna */
+    justify-content: space-between; /* Distribuye los espacios equitativamente */
+    gap: 20px;
+    flex: 1; /* Ocupa la mitad del ancho del section */
+    border: 1px solid black; /* Opcional: para visualizar el contenedor */
+    padding: 20px;
+}
+
+.videos {
+    width: 100%;
+    height: 100px;
+
+}
+
+
+
+.ingredientes {
+    width: 100%;
+    height: auto;                     /* Cambiado de 150px a auto */
+    min-height: fit-content;          /* Se adapta dinámicamente */
+    
+}
+
+.preparacion {
+    width: 100%;
+    height: auto !important;          /* Anula cualquier altura fija anterior */
+    min-height: fit-content;          /* Crece de forma automática según el texto */
+    overflow: visible;                /* Evita que el contenido desborde visualmente */
+    
+}
+
+
+
+.videos {
+    
+                         /* Cambiado de 100px a auto para que entre el iframe de YouTube */
+    width: 100%;
+    height: auto;                     /* Evita alturas fijas erróneas */
+    
+    display: flex;
+    
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    
+    justify-content: center;
+}
+
+/* Asegurar que los iframes dentro de los videos se adapten bien */
+.videos iframe {
+    max-width: 100%;
+    width: 100% !important;           /* Ocupa todo el ancho disponible */
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    border: none;
+    border-radius: 10px;
+}
+
+.foto {
+    flex: 1; 
+    height: auto;                     /* Cambiado de 80px a auto */
+    
+}
+
+.foto img {
+    width: 100%;
+    height: auto;                     /* Hace que la imagen sea responsive y no se deforme */
+    border-radius: 20px;
+}
+
+
+.videos {
+    width: 100%;
+    height: auto;                     /* Cambiado de 100px a auto para que se adapte al video */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;                 /* Evita cualquier desbordamiento visual */
+    padding: 10px;
+}
+
+/* Hace que el iframe de YouTube sea responsivo y entre en el cuadro */
+.videos iframe {
+    width: 100%;                      /* Se adapta al ancho del contenedor */
+    max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+    border-radius: 10px;              /* Opcional: bordes redondeados para que se vea más prolijo */
+}
+
+@media (max-width: 900px) {
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  section,
+  aside {
+    width: 100%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav button {
+    font-size: clamp(18px, 3vw, 30px);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+}
 
 
 
 
+
+.cssderedes {
+              
+display: flex;
+  flex-direction: row;              
+
+}
 
