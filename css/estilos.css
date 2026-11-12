@@ -402,3 +402,83 @@ display: flex;
 
 }
 
+/* Evita desbordamientos en pantallas estrechas y adapta medios al contenedor. */
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+.contenedor-principal,
+section,
+aside {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 9vw, 3rem);
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  nav button,
+  .volveralinicio {
+    max-width: 100%;
+    font-size: clamp(16px, 5vw, 22px);
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  section,
+  aside {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .contenedor-fotos {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .foto {
+    flex: 1 1 180px;
+  }
+
+  .listas {
+    font-size: clamp(16px, 4.5vw, 22px);
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    overflow-wrap: anywhere;
+  }
+
+  footer {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .cssderedes {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
