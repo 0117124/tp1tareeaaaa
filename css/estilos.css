@@ -409,8 +409,7 @@ video {
   max-width: 100%;
 }
 
-.contenedor-principal,
-section,
+
 aside {
   min-width: 0;
 }
@@ -433,19 +432,14 @@ aside {
     padding: 16px;
   }
 
-  nav button,
-  .volveralinicio {
-    max-width: 100%;
-    font-size: clamp(16px, 5vw, 22px);
-  }
-
+  
   .contenedor-principal {
     flex-direction: column;
     gap: 12px;
     padding: 12px;
   }
 
-  section,
+  
   aside {
     width: 100%;
     padding: 12px;
